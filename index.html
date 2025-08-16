@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Body Shapers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("bg3.jpg") no-repeat center center/cover;
+      font-family: "DM Serif Text", serif;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      flex-wrap: wrap;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .left img {
+      width: 100px;
+      height: auto;
+    }
+
+    #name {
+      color: red;
+      background: black;
+      padding: 5px 10px;
+      margin-top: 5px;
+    }
+
+    /* NAVBAR */
+    .mid {
+      flex: 1;
+      margin: 10px;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar li {
+      list-style: none;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: red;
+      margin: 10px 15px;
+      font-size: 16px;
+    }
+
+    .navbar a.active,
+    .navbar a:hover {
+      text-decoration: underline;
+      color: rgb(182, 0, 0);
+    }
+
+    /* RIGHT BUTTONS */
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      color: red;
+      background-color: black;
+      border: 2px solid white;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-family: "DM Serif Text", serif;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: rgb(89, 85, 85);
+    }
+
+    /* FORM CONTAINER */
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 4px solid white;
+      border-radius: 15px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: red;
+      text-align: center;
+    }
+
+    .form-field input {
+      width: 90%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      font-family: "DM Serif Text", serif;
+      text-align: center;
+    }
+
+    .sub {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    /* 📱 RESPONSIVE MEDIA QUERIES */
+    @media (max-width: 992px) {
+      .navbar a {
+        font-size: 14px;
+        margin: 8px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .right {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .navbar {
+        flex-direction: column;
+      }
+
+      .navbar a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .left img {
+        width: 80px;
+      }
+
+      #name {
+        font-size: 14px;
+      }
+
+      .sub {
+        font-size: 16px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="left">
+      <img
+        src="WhatsApp Image 2024-06-09 at 11.48.35 PM.jpeg"
+        alt="Logo"
+      />
+      <div id="name">BODY SHAPERS</div>
+    </div>
+
+    <div class="mid">
+      <ul class="navbar">
+        <li><a href="#" class="active">HOME</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">LOCATIONS & PRICING</a></li>
+        <li><a href="#">OUR TEAM</a></li>
+        <li><a href="#">PERSONAL TRAINING</a></li>
+        <li><a href="#">PRE AND POSTNATAL FITNESS</a></li>
+        <li><a href="#">CONTACT US</a></li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <button>CALL US NOW</button>
+      <button>EMAIL US</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>JOIN BODY SHAPERS NOW</h1>
+    <form action="noaction.php">
+      <div class="form-field">
+        <input type="text" placeholder="ENTER YOUR NAME" />
+      </div>
+      <div class="form-field">
+        <input type="text" placeholder="ENTER YOUR AGE" />
+      </div>
+      <div class="form-field">
+        <input type="text" placeholder="ENTER YOUR GENDER" />
+      </div>
+      <div class="form-field">
+        <input type="text" placeholder="ENTER YOUR LOCALITY" />
+      </div>
+      <div class="form-field">
+        <input type="text" placeholder="ENTER YOUR PHONE NUMBER" />
+      </div>
+      <div class="form-field">
+        <input type="text" placeholder="ENTER YOUR EMAIL ID" />
+      </div>
+      <button class="sub">SUBMIT</button>
+    </form>
+  </div>
+</body>
+</html>
